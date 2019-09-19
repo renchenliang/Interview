@@ -11,8 +11,8 @@ SVM算法，以及其中的硬间隔、软间隔的意思；核参数的类别�
     typedef struct {
        PyObject_VAR_HEAD
        PyObject **ob_item;(指向列表元素的指针)
-       Py_ssize_t allocated;（分配内存的大小）
-   } PyListObject;
+       Py_ssize_t allocated;（分配内存的大小)
+       } PyListObject;
    这里的分配内存是成倍增加的0，4，8，16，25，35，46，58，72，88……当列表长度小于总内存的一半时，会自动的删除1/2内存
    (https://zhuanlan.zhihu.com/p/30584550)
    (https://www.jianshu.com/p/cd75475168ae)
