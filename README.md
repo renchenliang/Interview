@@ -17,3 +17,7 @@ SVM算法，以及其中的硬间隔、软间隔的意思；核参数的类别�
    (https://zhuanlan.zhihu.com/p/30584550)
    (https://www.jianshu.com/p/cd75475168ae)
    append的复杂度O(1)   insert O(n)     Pop O(1)
+   
+   [https://flashgene.com/wp-content/uploads/2019/07/fda81caafb8daf580fc1548ec92f6240.png]
+  Batch Normlization运行原理
+  -
