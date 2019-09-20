@@ -18,6 +18,13 @@ SVM算法，以及其中的硬间隔、软间隔的意思；核参数的类别�
    (https://www.jianshu.com/p/cd75475168ae)
    append的复杂度O(1)   insert O(n)     Pop O(1)
    
-   [https://flashgene.com/wp-content/uploads/2019/07/fda81caafb8daf580fc1548ec92f6240.png]
-  Batch Normlization运行原理
-  -
+Batch Normlization运行原理
+-
+   ![](https://flashgene.com/wp-content/uploads/2019/07/fda81caafb8daf580fc1548ec92f6240.png)
+   CNN卷积前向
+   ![](https://flashgene.com/wp-content/uploads/2019/07/13267986fe72122e5a5d4a1c4a4aaad4.png)
+   ![](https://images2018.cnblogs.com/blog/1053881/201804/1053881-20180412173741958-245242223.png)
+   训练阶段：对mini-batch中的每一个实例卷积后的对应位置的同一通道中的所有元素求均值以及方差
+   测试阶段：记录训练mini-batch过程中的每一个均值以及方差，并对所有的均值-方差求无偏估计作为inferere的均值与方差。
+  
+
