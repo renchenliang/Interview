@@ -14,18 +14,18 @@ python list底层实现原理
        Py_ssize_t allocated;（分配内存的大小)
        } PyListObject;<br>
     这里的分配内存是成倍增加的0，4，8，16，25，35，46，58，72，88……当列表长度小于总内存的一半时，会自动的删除1/2内存<br>
-    (https://zhuanlan.zhihu.com/p/30584550)<br>
-    (https://www.jianshu.com/p/cd75475168ae)<br>
+   (https://zhuanlan.zhihu.com/p/30584550)<br>
+   (https://www.jianshu.com/p/cd75475168ae)<br>
     append的复杂度O(1)   insert O(n)     Pop O(1)
    
 Batch Normlization运行原理
 -
-    ![](https://flashgene.com/wp-content/uploads/2019/07/fda81caafb8daf580fc1548ec92f6240.png) <br>
+   ![](https://flashgene.com/wp-content/uploads/2019/07/fda81caafb8daf580fc1548ec92f6240.png) <br>
     CNN卷积前向<br>
-    ![](https://flashgene.com/wp-content/uploads/2019/07/13267986fe72122e5a5d4a1c4a4aaad4.png)
-    ![](https://images2018.cnblogs.com/blog/1053881/201804/1053881-20180412173741958-245242223.png)<br>
+   ![](https://flashgene.com/wp-content/uploads/2019/07/13267986fe72122e5a5d4a1c4a4aaad4.png)
+   ![](https://images2018.cnblogs.com/blog/1053881/201804/1053881-20180412173741958-245242223.png)<br>
     训练阶段：对mini-batch中的每一个实例卷积后的对应位置的同一通道中的所有元素求均值以及方差 <br>
-    测试阶段：记录训练mini-batch过程中的每一个均值以及方差，并对所有的均值-方差求无偏估计作为inferere的均值与方差。<br>
+     测试阶段：记录训练mini-batch过程中的每一个均值以及方差，并对所有的均值-方差求无偏估计作为inferere的均值与方差。<br>
 
 LR为什么不用MSE？SVM为什么用hinge，而不用logloss?
 -
@@ -45,10 +45,10 @@ K-Means一定会收敛么？为什么？
 
 AUC与ROC的含义？
 -
-    * ROC曲线: 接收者操作特征(receiver operating characteristic))<br>
-    ![](http://images.cnitblog.com/blog2015/712297/201504/081954327748728.jpg)
-    纵坐标 真正类率(True Postive Rate)TPR： 在正类中被预测为正类占所有正类的比例
-    横坐标 负正类率(False Postive Rate)FPR： 在负类中被预测为正类占所有负类的比例
+   * ROC曲线: 接收者操作特征(receiver operating characteristic))<br>
+   ![](http://images.cnitblog.com/blog2015/712297/201504/081954327748728.jpg)
+   纵坐标 真正类率(True Postive Rate)TPR： 在正类中被预测为正类占所有正类的比例
+   横坐标 负正类率(False Postive Rate)FPR： 在负类中被预测为正类占所有负类的比例
 
 浅copy与深copy的区别？
 -
