@@ -22,7 +22,7 @@ Batch Normlization运行原理
 -
    ![](https://flashgene.com/wp-content/uploads/2019/07/fda81caafb8daf580fc1548ec92f6240.png) <br>
     CNN卷积前向<br>
-   ![](https://flashgene.com/wp-content/uploads/2019/07/13267986fe72122e5a5d4a1c4a4aaad4.png)
+   ![](https://flashgene.com/wp-content/uploads/2019/07/13267986fe72122e5a5d4a1c4a4aaad4.png) <br>
    ![](https://images2018.cnblogs.com/blog/1053881/201804/1053881-20180412173741958-245242223.png)<br>
     训练阶段：对mini-batch中的每一个实例卷积后的对应位置的同一通道中的所有元素求均值以及方差 <br>
      测试阶段：记录训练mini-batch过程中的每一个均值以及方差，并对所有的均值-方差求无偏估计作为inferere的均值与方差。<br>
@@ -81,14 +81,14 @@ Yolo,SSD, centernet,cornernet
 
 Focal Loss如何进行难分样本挖掘的？
 -
-one-stage比two-stage精度低的原因主要是正负样本比例不均衡。 one-stage会产生大量的候选区域，而这些候选区域只有很少的一部分属于正样本。 而two-stage经过RPN网络，初选出那些概率比较大的候选区域，令正负样本的比例在1：3.
+ one-stage比two-stage精度低的原因主要是正负样本比例不均衡。 one-stage会产生大量的候选区域，而这些候选区域只有很少的一部分属于正样本。 而two-stage经过RPN网络，初选出那些概率比较大的候选区域，令正负样本的比例在1：3.<br>
 
-![](https://images2018.cnblogs.com/blog/1055519/201808/1055519-20180818162755861-24998254.png)
-在二分类的交叉熵损失函数中，正样本预测概率值越大，其损失越小；负样本预测概率越小，损失越大。这样使得越简单的正样本占的损失使得困难样本的损失起的作用很小。因此引出如下focal Loss
-![](https://images2018.cnblogs.com/blog/1055519/201808/1055519-20180818174822290-765890427.png)
-引入Gamma因子。Gamma>0使得减少易分类样本的损失，使得模型更关注于困难的、错分的样本。
-最后再引入数据平衡因子 Alpha，用来平衡正负样本本身的数量比例不均（即类别不均衡）
-![](https://images2018.cnblogs.com/blog/1055519/201808/1055519-20180818174944824-933422059.png)
+ ![](https://images2018.cnblogs.com/blog/1055519/201808/1055519-20180818162755861-24998254.png)<br>
+ 在二分类的交叉熵损失函数中，正样本预测概率值越大，其损失越小；负样本预测概率越小，损失越大。这样使得越简单的正样本占的损失使得困难样本的损失起的作用很小。因此引出如下focal Loss <br>
+ ![](https://images2018.cnblogs.com/blog/1055519/201808/1055519-20180818174822290-765890427.png)<br>
+ 引入Gamma因子。Gamma>0使得减少易分类样本的损失，使得模型更关注于困难的、错分的样本。<br>
+ 最后再引入数据平衡因子 Alpha，用来平衡正负样本本身的数量比例不均（即类别不均衡）<br>
+ ![](https://images2018.cnblogs.com/blog/1055519/201808/1055519-20180818174944824-933422059.png)<br>
 
 
 
